@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="mySt.xsl"?>
+
+<BooksCatalog>
+<book>
+<title>Computer Networks</title>
+<author>Andrew S. TanenBaum</author>
+<isbn>C254854</isbn>
+<publisher>PHI</publisher>
+<edition>2nd edition</edition>
+<price>500</price>
+</book>
+<book>
+<title>Wt</title>
+<author>Himesh</author>
+<isbn>C254854</isbn>
+<publisher>PHI</publisher>
+<edition>1st edition</edition>
+<price>1500</price>
+</book>
+<book>
+<title>Python</title>
+<author>Tagore</author>
+<isbn>C254854</isbn>
+<publisher>PHI</publisher>
+<edition>3rd edition</edition>
+<price>2000</price>
+</book>
+<book>
+<title>JAVA</title>
+<author>M.krishna</author>
+<isbn>C254854</isbn>
+<publisher>PHI</publisher>
+<edition>2nd edition</edition>
+<price>3000</price>
+</book>
+<book>
+<title>C++</title>
+<author>Balu</author>
+<isbn>C254854</isbn>
+<publisher>PHI</publisher>
+<edition>1st edition</edition>
+<price>1000</price>
+</book>
+</BooksCatalog>

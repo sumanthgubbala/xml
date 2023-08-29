@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+
+<body>
+    <input id ="i1" type="number" placeholder="enter 0 - 4" onkeyup="button()"/>
+    <input id ="i2" type="text" placeholder="enter" onkeyup="button()"/>
+    
+    <p id="p1">
+
+    </p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+  
+        function button(){
+            var i=document.getElementById("i1").value;
+            
+            document.getElementById("p1").innerHTML=i;
+            var http = new XMLHttpRequest(); 
+        
+            http.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    f1(this);
+                }
+            };
+            http.open("GET","books.xml",true);
+            http.send();
+            function f1(xml){
+                var Doc = xml.responseXML;
+                var i= document.getElementById("i1").value;
+                var j=document.getElementById("i2").value;
+                document.getElementById("p1").innerHTML = Doc.getElementsByTagName(j)[i].childNodes[0].nodeValue;
+                document.getElementById("p2").innerHTML = Doc.getElementsByTagName("author")[i].childNodes[0].nodeValue;
+                document.getElementById("p3").innerHTML= Doc.getElementsByTagName("price")[i].childNodes[0].nodeValue;
+                if(i>=5){
+                    document.getElementById("p1").innerHTML="error";
+                }
+            }
+
+        }
+        function search(){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", "books.xml", true);
+            xhttp.send();
+
+            function myFunction(xml) {
+            var xmlDoc = xml.responseXML;
+            var j=document.getElementById("i2").value;
+            if(j=="title"){
+                
+            }
+        }
+    }
+
+    </script>
+</body>
+</html>
